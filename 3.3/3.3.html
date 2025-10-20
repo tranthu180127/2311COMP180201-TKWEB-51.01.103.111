@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        body{
+            background-image: url(../../../img/amongusgreen.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 50px 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Add New Product</h2>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="text" id="newProduct" placeholder="New Product" aria-label="add"/>
+                <button class="btn btn-outline-success" type="button" id="addButton" onclick="addProduct()">Add</button>
+            </div>
+            <div class="card-body">
+                <h2>Display All Product</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sony Xperia</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Samsung Galaxy</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Nokia 6</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Xiaomi Redmi Note 4</td>
+<td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Apple Iphone 6S</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Xiaomi Mi 5s Plus</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Apple Iphone 8 Plus</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Fujitsu F-04E</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Oppo A71</td>
+                            <td><button type="button" class="btn btn-success" id="edit" onclick="editProduct(this)">Edit</button></td>
+                            <td><button type="button" class="btn btn-success" id="delete"  onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        const editProduct = (e) => {
+            const newproduct = prompt('Hãy nhập tên mới.', e.closest('tr').cells[0].textContent);
+            if (newproduct != '') e.closest('tr').cells[0].textContent = newproduct;
+        };
+        const deleteRow = (e) => {
+            const row = e.closest('tr');
+            const confirmDelete = confirm(`Bạn có chắc muốn xóa không?`);
+            if (confirmDelete) row.remove();
+        };
+        const addProduct = () => {
+            const input = document.getElementById("newProduct");
+            const newProduct = input.value;
+            const table = document.querySelector("table");
+const row = table.insertRow(-1);
+            const nameCell = row.insertCell(0);
+            nameCell.textContent = newProduct;
+            const editCell = row.insertCell(1);
+            editCell.innerHTML = `<button type="button" class="btn btn-success" onclick="editProduct(this)">Edit</button>`;
+            const deleteCell = row.insertCell(2);
+            deleteCell.innerHTML = `<button type="button" class="btn btn-success" onclick="deleteRow(this)">Delete</button>`;
+            input.value = "";
+        };
+    </script>
+</body>
+</html>
