@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HỒ CÁ VUI NHỘN</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body background="/6.1.1/img/background.avif"
+style="background-size: cover; background-repeat: no-repeat;">   
+</body>
+<audio autoplay muted loop>
+    <source src="/6.1.1/Nhạc không lời vui nhộn dành cho bé - YouTube.mp3">
+</audio>
+<script>
+  window.addEventListener('load', function() {
+    const audio = document.querySelector('audio');
+    setTimeout(() => {
+      audio.muted = false;
+      audio.play().catch(err => console.log("Autoplay bị chặn:", err));
+    }, 1000);
+  });
+</script>
+<div id="content">
+    <div id="shark"><img src="/6.1.1/img/shark.png"; width="auto" height="auto"></div>
+    <div id="turtle"><img src="/6.1.1/img/turtle.png"; width="auto" height="auto"></div>
+    <div id="faint"><img src="/6.1.1/img/faintSchool.png"; width="auto" height="auto"></div>
+    <div id="goldfish"><img src="/6.1.1/img/goldFishSchool.png"; width="auto" height="auto"></div>
+    <div id="diver1"><img src="/6.1.1/img/diver1.png"; width="auto" height="auto"></div>
+    <div id="diver2"><img src="/6.1.1/img/diver2.png"; width="auto" height="auto"></div>
+    <div id="diver3"><img src="/6.1.1/img/diver3.png"; width="auto" height="auto"></div>
+</div>
+</html>
