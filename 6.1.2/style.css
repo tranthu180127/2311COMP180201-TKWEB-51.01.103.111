@@ -1,0 +1,153 @@
+:root {
+    --color-primary: #FF8C00;
+    --color-text-light: #F0F0F0; 
+    --color-background-dark: #333;
+    --color-accent: #DAA520;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-background-dark); 
+    color: var(--color-text-light); 
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.site-header {
+    background-color: var(--color-secondary); 
+    padding: 20px 0;
+    border-bottom: 5px solid var(--color-primary); 
+}
+
+.site-header h1 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+}
+
+nav ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-primary); 
+    color: var(--color-secondary);
+}
+
+
+.site-main {
+    padding: 40px 0;
+}
+
+.content-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.content-section h2 {
+    color: var(--color-accent); 
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-primary), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+
+.product-list, .image-gallery {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item, .gallery-item {
+    background-color: var(--color-secondary);
+    padding: 15px;
+    text-align: center;
+    border: 3px solid var(--color-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product-item:hover, .gallery-item:hover {
+    transform: scale(1.05);
+    border-color: var(--color-accent);
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #555;
+    color: var(--color-text-light);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+.registration-form button {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.registration-form button:hover {
+    background-color: var(--color-accent);
+}
+
+
+.site-footer {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-light);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 5px solid var(--color-primary);
+}
+
+.site-footer h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+.pic1 {
+    width: 40px;
+    height: 40px;
+}
