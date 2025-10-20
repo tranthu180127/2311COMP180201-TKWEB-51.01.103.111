@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THÔNG TIN LIÊN HỆ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            line-height: 100px;
+            border: 1px solid lemonchiffon;
+            border-radius: 8px;
+            text-align: center;
+            background-color: lemonchiffon;
+            font-size: 70px;
+            margin-top: 90px;
+            display: inline-block;
+        }
+        .sgp {
+            text-align: center;
+        }
+        .win {
+            font-size: 20px;
+            display: inline-block;
+            max-width: 800px;
+            margin: 100px 450px 20px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #00000033;
+        }
+        .t1 {
+            font-size: 25px;
+        }
+        .maps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap; /* Tự động xuống dòng nếu màn hình nhỏ */
+        }
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+        }
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            text-decoration: none;
+        }
+        a:active {
+            color: green;
+            text-decoration: underline;
+        }
+        a {
+            margin-left: 200px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body background="/1.6/b431e471166987e82aed42e8d1dbeb77.jpg"
+        style="background-size: cover; background-repeat: no-repeat;">
+    <div class="sgp">
+        <h1>ĐỊA CHỈ LIÊN HỆ</h1>
+    </div>
+
+    <div class="win">
+        <div class="t1">
+            <p><b>Địa chỉ thường trú:</b> 131, Khu phố Đầu Doi, Xã Hòn Đất, Tỉnh An Giang.</p>
+            <p><b>Nơi ở hiện tại:</b> 453/77C6, Đường Lê Văn Sỹ, Phường 12, Quận 3, Thành phố Hồ Chí Minh.</p>
+            <p><b>Email:</b> 5101103111@student.hcmue.edu.vn</p>
+            <p><b>Số điện thoại:</b> 0392931442</p>
+        </div>
+
+        <!-- Khu vực chứa hai bản đồ -->
+        <div class="maps">
+            <!-- Bản đồ địa chỉ thường trú -->
+            <iframe 
+                src="https://www.google.com/maps?q=Hòn+Đất,+An+Giang,+Vietnam&output=embed"
+                allowfullscreen="" loading="lazy"></iframe>
+
+            <!-- Bản đồ nơi ở hiện tại -->
+            <iframe 
+                src="https://www.google.com/maps?q=453/77C6+Lê+Văn+Sỹ,+Phường+12,+Quận+3,+TPHCM&output=embed"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    
+    <a href="./trangchu.html">&larr; Quay lại</a>
+</body>
+</html>
